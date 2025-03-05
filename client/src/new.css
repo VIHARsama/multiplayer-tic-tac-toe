@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+   --primary-color: #1e1e20;
+   --secondary-color: #404045;
+   /* --primary-color: #1f202f; */
+   /* --secondary-color: #4b495f; */
+   --new-color: orange;
+   --blue-color: #627fea;
+   --red-color: #627fea;
+   --logout-color: #ff554d;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   min-height: 100vh;
+   background: var(--primary-color);
+   color: white;
+   font-family: "Poppins", serif;
+}
+
+.form-box,
+.home {
+   padding: 0;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   margin: 0 15px;
+}
+
+.container {
+   width: 100%;
+   max-width: 450px;
+   padding: 30px;
+   background: var(--secondary-color);
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-box-heading {
+   font-size: 40px;
+   margin: 0;
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+.authentication-input {
+   width: 100%;
+   padding: 12px;
+   background: #eee;
+   border-radius: 6px;
+   border: none;
+   outline: none;
+   font-size: 16px;
+   color: #333;
+   margin-bottom: 20px;
+}
+
+.authentication-button {
+   width: 100%;
+   padding: 12px;
+   background: #6884d3;
+   background: var(--blue-color);
+   border-radius: 6px;
+   border: none;
+   cursor: pointer;
+   font-size: 16px;
+   color: #fff;
+   font-weight: 800;
+   margin-bottom: 20px;
+   transition: 0.5s;
+}
+
+.authentication-button:hover {
+   background: #383b68;
+}
+
+.board {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+   margin-top: 5vh;
+}
+
+.authentication-p {
+   font-size: 17px;
+   font-weight: 500;
+   text-align: center;
+   margin-bottom: 10px;
+}
+
+p .authentication-link,
+a {
+   color: #8299ec;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+p .authentication-link {
+   text-decoration: underline;
+}
+
+.home-heading {
+   margin: 0;
+   font-size: 40px;
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+.room-heading {
+   margin: 0;
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+.room-input {
+   width: 100%;
+   padding: 12px;
+   background: #eee;
+   border-radius: 6px;
+   border: none;
+   outline: none;
+   font-size: 16px;
+   color: #333;
+   margin-bottom: 20px;
+}
+
+.join-room-button,
+.logout-button {
+   width: 100%;
+   padding: 12px;
+   background: #6884d3;
+   border-radius: 6px;
+   border: none;
+   cursor: pointer;
+   font-size: 16px;
+   color: #fff;
+   font-weight: 500;
+   margin-bottom: 20px;
+   transition: 0.5s;
+}
+
+.join-room-button:hover {
+   background: #383b68;
+}
+
+.create-room-p {
+   font-size: 17px;
+   font-weight: 500;
+   text-align: center;
+   margin-bottom: 10px;
+}
+
+.logout {
+   padding-top: 10px;
+   text-align: center;
+}
+
+.logout-button {
+   width: 50%;
+   background: #d35d5d;
+   background-color: var(--logout-color);
+}
+
+.move-detection {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 600px;
+}
+
+.player,
+.opponent {
+   height: 55px;
+   width: 100%;
+   max-width: 150px;
+   padding: 5px 10px;
+   background-color: var(--secondary-color);
+   border-radius: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 21px;
+   font-weight: 600;
+}
+
+.game-heading {
+   text-align: center;
+   font-size: 45px;
+   padding: 5px 10px;
+   border-radius: 5px;
+   background-color: var(--secondary-color);
+}
+
+.square {
+   width: 150px;
+   height: 150px;
+   background-color: var(--secondary-color);
+   border-radius: 5px;
+}
+
+.square:hover {
+   cursor: pointer;
+}
+
+.square-wrapper {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   row-gap: 10px;
+   column-gap: 10px;
+}
+
+.game-finished {
+   font-size: 30px;
+   text-align: center;
+   margin: 0;
+   margin-top: 30px;
+}
+
+.X-won,
+.player-highlight {
+   background-color: #ea6962;
+}
+
+.O-won,
+.opponent-highlight {
+   background-color: #627fea;
+}
+
+.button-wrapper {
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+}
+
+.reset-button {
+   width: 40%;
+   padding: 19px;
+   background: #6884d3;
+   border-radius: 6px;
+   border: none;
+   cursor: pointer;
+   font-size: 16px;
+   color: #fff;
+   font-weight: 500;
+   transition: 0.5s;
+}
+
+.game-button {
+   width: 40%;
+   margin-top: 20px;
+   padding: 19px;
+   background: #6884d3;
+   border-radius: 6px;
+   border: none;
+   cursor: pointer;
+   font-size: 16px;
+   color: #fff;
+   font-weight: 500;
+   transition: 0.5s;
+}
+
+.button-wrapper {
+   padding-top: 10px;
+   text-align: center;
+}
+
+.waiting-room {
+   padding: 0;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   margin: 0 15px;
+}
+
+.waiting-room-heading {
+   text-align: center;
+   font-size: 50px;
+}
+
+.leave-waiting-room {
+   text-align: center;
+}
+
+.waiting-room-button {
+   width: 40%;
+   margin-top: 20px;
+   padding: 16px;
+   background: #6884d3;
+   border-radius: 6px;
+   border: none;
+   cursor: pointer;
+   font-size: 16px;
+   color: #fff;
+   font-weight: 500;
+   transition: 0.5s;
+}
+
+.page-not-found {
+   padding: 0;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.page-not-found h1 {
+   margin: 0;
+   padding: 0;
+   text-align: center;
+   font-size: 60px;
+}
+
+.page-not-found h3 {
+   margin: 0;
+   padding: 0;
+   text-align: center;
+   font-size: 40px;
+}
+
+.page-not-found div {
+   text-align: center;
+}
+
+.page-not-found-button {
+   width: 70%;
+   margin-top: 20px;
+   padding: 16px;
+   background: #6884d3;
+   border-radius: 6px;
+   border: none;
+   cursor: pointer;
+   font-size: 19px;
+   color: #fff;
+   font-weight: 500;
+   transition: 0.5s;
+}
